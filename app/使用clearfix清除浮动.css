@@ -1,0 +1,15 @@
+
+/*清除浮动的作用是什么？如何清除浮动？*/
+
+.clearfix {
+    *zoom:1
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content:"";
+    line-height: 0;
+}
+
+.clear:after {
+    clear: both;
+}

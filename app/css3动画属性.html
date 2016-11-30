@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css动画属性</title>
+  <style>
+    div{
+      width:100px;
+      height:100px;
+      background:red ;
+      position: relative;
+      -webkit-animation:mymove 5s infinite;
+      -o-animation:mymove 5s infinite;
+      animation:mymove 5s infinite;
+    }
+    @keyframes mymove {
+      from {  top: 0;}
+      to {  top: 200px;}
+    }
+    @-webkit-keyframes mymove {
+      from {top:0}
+      to {top:200px}
+    }
+    @-o-keyframes mymove {
+      from {top:0}
+      to{top:200px}
+    }
+  </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
