@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    article::before {
+      content: attr(data-parent);
+      /*content: url(src/1.jpg);*/
+    }
+    q {
+      color: #00008B;
+      font-style: italic;
+    }
+
+    q::before   { content: open-quote }
+    q::after    { content: close-quote }
+
+    h1::before  { content: "Chapter "; }
+
+    a::before{
+      content: url(https://mozorg.cdn.mozilla.net/media/img/favicon.ico) " MOZILLA: ";
+      font:    x-small Arial,freeSans,sans-serif;
+      color:   gray;
+    }
+    article[data-columns='3'] {
+      width: 400px;
+    }
+    article[data-columns='4'] {
+      width: 600px;
+    }
+  </style>
+</head>
+<body>
+<blockquote>
+  Here is a long quotation here is a long quotation here is a long quotation
+  here is a long quotation here is a long quotation here is a long quotation
+  here is a long quotation here is a long quotation here is a long quotation.
+</blockquote>
+<article
+    id="electriccars"
+    data-columns="3"
+    data-index-number="12314"
+    data-parent="cars">
+</article>
+<h1>5</h1>
+<p> We shall start this with a quote from Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.</q>  We must understand that there is nothing fundamentally wrong with building on the contributions of others.
+</p>
+
+<h1>6</h1>
+<p> Here we shall quote the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    Individuals must have the ability to shape the Internet and their own experiences on the Internet.</q> And so, we can infer that contributing to the open web, can protect our own individual experiences on it.
+</p>
+<a href="http://www.mozilla.org/en-US/">Home Page</a>
+<script type="text/javascript">
+  var article = document.querySelector('#electriccars');
+
+  article.dataset.columns // "3"
+  article.dataset.indexNumber // "12314"
+  article.dataset.parent // "cars"
+
+  var attribute = document.querySelector('#electriccars').getAttribute('data-columns');
+</script>
+</body>
+</html>

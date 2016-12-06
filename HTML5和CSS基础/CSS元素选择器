@@ -1,0 +1,43 @@
+1.class selectors
+In your stylesheet, type a full stop (period) before the class name when you use it in a selector.
+//在你的层叠样式表中，要使用一个class选择器，只需要在class名字前加上一个点号（.）。例如：.className {}
+
+2.ID selectors
+In your stylesheet, type a number sign (hash) before the ID when you use it in a selector.
+//在id之前加上 # 号即可。例如： #idName
+
+For example:
+<p class="key" id="principal">
+
+Note:
+as the text above,
+the id value, principal,must be a unique in the document.But the other tags can have the same class value,key.
+
+.key { color:green;}
+
+#principal { font-size:30px;}
+
+3.Attribute Selectors
+You are not restricted to the two special attributes, class and id. You can specify other attributes by using
+square brackets. Inside the brackets you put the attribute name, optionally followed by a matching operator
+and a value.
+
+[disabled]
+    Select all elements with a 'disabled' attribute.
+[type='button']
+    select all elements with a 'button' type.
+
+[class~=key]
+Selects elements with the class "key" (but not e.g. "keyed", "monkey", "buckeye"). Functionally equivalent
+to .key.
+
+[title*='example']
+Selects elements whose title contains "example".
+
+a[href^='https://']
+Specifies what the attribute's value should start with; in this case, it selects secure links.
+
+img[src$='.png']
+Selects elements whose value ends with the provided string. Indirectly selects PNG images; any images that
+are PNGs but whose URL doesn't end in ".png" (e.g. `src="some-image.png?_=cachebusterhash"`) won't be selected.
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <!--加入没有meta中的charset属性设置为utf-8，那么，在网页中出现中文的话，页面会出现乱码。-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!--这是个是IE8的专用标记,用来指定IE8浏览器去模拟某个特定版本的IE浏览器的渲染方式（比如人见人烦的IE6），以此来解决部分兼容问题。
+  这样写可以达到的效果是如果安装了GCF，则使用GCF来渲染页面，如果未安装GCF，则使用最高版本的IE内核进行渲染。-->
+  <title>淘宝网-淘！我喜欢</title>
+  <meta name="renderer" content="webkit">
+  <!--<meta name="renderer" content="webkit|ie-comp|ie-stand">
+  content的取值为webkit,ie-comp,ie-stand之一，区分大小写，分别代表用webkit内核，IE兼容内核，IE标准内核。
+  若页面需默认用极速核，增加标签：<meta name="renderer" content="webkit">
+  若页面需默认用ie兼容内核，增加标签：<meta name="renderer" content="ie-comp">
+  若页面需默认用ie标准内核，增加标签：<meta name="renderer" content="ie-stand">-->
+  <meta name="spm-id" content="a21bo">
+
+  <meta name="description" content="淘宝网 - 亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 数亿优质商品，同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄等消费者保障服务，让你安心享受网上购物乐趣！">
+  <!--name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。参见我的博客-->
+  <meta name="keywords" content="淘宝,掏宝,网上购物,C2C,在线交易,交易市场,网上交易,交易市场,网上买,网上卖,购物网站,团购,网上贸易,安全购物,电子商务,放心买,供应,买卖信息,网店,一口价,拍卖,网上开店,网络购物,打折,免费开店,网购,频道,店铺">
+  <!--其中，description属性用于页面描述，用于搜索引擎收录。
+  keywords属性页面关键词，用于被搜索引擎收录。-->
+
+  <link rel="dns-prefetch" href="//g.alicdn.com">
+  <!--现代浏览器都支持DNS的预解析，学名：DNS Prefetching。详细资料参考我的segmentfaul.com的账号或者https://segmentfault.com/a/1190000003944417-->
+  <link rel="dns-prefetch" href="//img.alicdn.com" />
+  <link rel="dns-prefetch" href="//tce.alicdn.com" />
+  <link rel="dns-prefetch" href="//gm.mmstat.com" />
+  <link rel="dns-prefetch" href="//log.mmstat.com" />
+  <link rel="dns-prefetch" href="//tui.taobao.com" />
+  <link rel="dns-prefetch" href="//ald.taobao.com" />
+  <link rel="dns-prefetch" href="//gw.alicdn.com" />
+  <link rel="dns-prefetch" href="//atanx.alicdn.com"/>
+  <link rel="dns-prefetch" href="//dfhs.tanx.com"/>
+  <link rel="dns-prefetch" href="//ecpm.tanx.com" />
+  <link rel="dns-prefetch" href="//res.mmstat.com" />
+  <link rel="dns-prefetch" href="//log.mmstat.com" />
+  <link href="//img.alicdn.com/tps/i3/T1OjaVFl4dXXa.JOZB-114-114.png" rel="apple-touch-icon-precomposed" />
+
+  <script>if('undefined'===typeof console) {window.console = undefined;}</script>
+  <!--这里是为了保证IE8或者以下浏览器不识别console。
+  这里'undefined'===typeof console,这里用typeof 操作符，是为了使console不会出现引用错误，出现undefined报错。-->
+  <style type="text/css">
+    blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,ul{
+      margin: 0;
+      padding: 0;
+    }
+    body,button,input,select,textarea {
+      /*font: 字体尺寸/行高（若没有单位，则对比于字体大小设置行高的倍数） tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',字体*/
+      font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif
+    }
+    h1,h2,h3,h4,h5,h6 {
+      /*font-size设置元素字体的大小。注意：实际上，它设置的是字体中字符框的高度，实际的字符字形可能比这些框高或矮（通常会矮）。
+      参见：test2.html*/
+      font-size: 100%;
+    }
+    address,cite,dnf,em,var {
+     font-style: normal;
+    }
+    code,kbd,pre,samp {
+      /*font-family:具体字体的名称 通常字体系列名称的一个优先表，通常以逗号分隔，浏览器会使用它可识别的第一个值。*/
+      font-family:courier new,courier,monospace
+    }
+    small {
+      font-size: 12px;
+    }
+    ol,ul {
+      /*CSS列表属性list-style,可以按顺序设置如下属性：
+        list-style-type:square或者circle等，
+        list-style-position：inside或者outside,
+        list-style-image:url('/i/arrow.gif')
+
+        举个例子：
+        ul{
+          list-style:square inside url('/i/arrow.gif');
+        }
+      */
+      list-style: none;
+    }
+    a {
+      /*CSS 文本属性，规定添加到文本的装饰效果，参见：http://www.w3school.com.cn/tiy/t.asp?f=csse_text-decoration*/
+      text-decoration: none;
+    }
+    a:hover {
+
+    }
+  </style>
+  <base target="_blank">
+  <!--<base>标签规定整个文档所有链接默认的地址或者目标。通常情况下，浏览器会从当前文档的 URL 中提取相应的元素来填写相对 URL 中的空白。
+  其中base的href属性规定整个文档的基础url，而target属性规定整个文档的链接目标。-->
+</head>
+<body data-spm="" class="">
+  <div class="cover J_Cover">
+    <div class="site-nav site-nav-status-logout" id="J_SiteNav" data-component-config="" data-tbar="">
+      <div class="site-nav-bd" id="J_SiteNavBd">
+        <ul class="site-nav-bd-l" id="J_SiteNavBdL" data-spm-ab="1">
+          <li class="site-nav-menu site-nav-login" id="J_SiteNavLogin" data-name="login" data-spm="754894437">
+            <div class=""></div>
+          </li>
+          <li class="site-nav-tmsg tmsg site-nav-multi-menu J_MultiMenu" id="J_Tmsg" data-name="tmsg" data-spm="1997563201"></li>
+          <li class="site-nav-menu site-nav-mobile" id="J_SiteNavMobile" data-name="mobile" data-spm="1997563273"></li>
+          <li class="site-nav-menu site-nav-weekend site-nav-multi-menu J_MultiMenu" id="J_SiteNavWeekend" data-name="weekend" data-spm></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
