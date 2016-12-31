@@ -1,0 +1,104 @@
+一共包含以下属性：
+    bottom:设置定位元素下外边距边界与其包含块下边界之间的偏移。
+    clear:规定元素的哪一侧不允许其他浮动元素。
+    clip:剪裁绝对定位元素。
+    cursor:规定要显示的光标的类型（形状）。
+    display:规定元素应该生成的框的类型。
+    float:规定框是否应该浮动。
+    left:设置定位元素左外边距边界与其包含块左边界之间的偏移。
+    overflow:规定当内容溢出元素框时发生的事情。
+    position:规定元素的定位类型。
+    right:设置定位元素右外边距边界与其包含块右边界之间的偏移。
+    top:设置定位元素的上外边距边界与其包含块上边界之间的偏移。
+    vertical-align:设置元素的垂直对齐方式。
+    visibility:规定元素是否可见。
+    z-index:设置元素的堆叠顺序。
+下面详细介绍上面的所有属性：
+bottom,left,right,top:
+参见例子：CSS定位测试用例1.html
+clear:默认只为none，即允许浮动元素出现在两侧。
+例如图像的左侧和右侧都不允许出现浮动：参见：http://www.w3school.com.cn/tiy/t.asp?f=csse_class-clear
+img {
+        float:left;
+        clear:both;
+    }
+
+clip:裁剪绝对定位元素。即该元素的position值为absolute。才能使该属性有效，
+裁剪图像：
+img{
+    position:absolute;
+    clip:rect(0px,60px,200px,0px); //rect中的参数值依次为top,right,bottom,left
+}
+cursor:默认是一个箭头。值不同，光标的形状不同。参见：http://www.w3school.com.cn/tiy/t.asp?f=csse_cursor
+
+display:规定元素应该生成的框的类型：
+值包含：
+    none：此元素不会被显示。
+    block：此元素将显示为块级元素，此元素前后会带有换行符
+    inline：此元素会被显示为内联元素，元素前后没有换行符。
+    inline-block：行内块元素。
+    list-item:此元素会作为列表显示.
+    table:此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。
+    inline-table:此元素会作为内联表格来显示（类似 <table>），表格前后没有换行符。
+    table-cell:此元素会作为一个表格单元格显示（类似 <td> 和 <th>）
+
+float:
+在CSS中，任何元素都可以浮动，浮动元素会生成一个块级框，而不论它本身是何种元素。参见：http://www.w3school.com.cn/tiy/t.asp?f=csse_float3
+值包含：
+    left:元素向左浮动。
+    right:元素向右浮动。
+    none:默认值。元素不浮动，并会显示在其在文本中出现的位置。
+    inherit:规定应该从父元素继承 float 属性的值。
+
+overflow:该属性规定当内容溢出元素框时发生的事情。
+这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下
+所有内容也会出现滚动条。
+值包含：
+    visible:默认值。内容不会被修剪，会呈现在元素框之外。
+    hidden:内容会被修剪，并且其余内容是不可见的。
+    scroll:内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+    auto:如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。如果害怕溢出，一般设置overflow值为auto，有则添加滚动条，否则不加。
+    inherit:规定应该从父元素继承 overflow 属性的值。
+position：（重点*）规定元素的定位类型：
+这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素会生成一个块级框，而不论该元素本身是什么类型。相对定位元素
+会相对于它在正常流中的默认位置偏移。
+
+值包含：
+    absolute：为元素指定相对于其父元素的确切位置。只有在父元素使用 relative, fixed or absolute 时才有效。
+    （即相对于static定位以外的第一个父元素进行定位。）你可以为任何父元素指定 position: relative;因为它不会产生移动。
+              元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+              参见：http://www.w3school.com.cn/tiy/t.asp?f=csse_position_absolute
+
+    fixed:为元素指定相对于窗口的确切位置 。即使文档的其它元素出现滚动，元素位置仍然不变。
+    元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+        参见：http://www.w3school.com.cn/tiy/t.asp?f=csse_position_fixed
+
+    relative：通过为元素指定一个值，元素相对于其原来位置移动。也可以使用margin来达到同样的效果
+    ，因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
+
+    static：默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+    inherit：规定应该从父元素继承position属性的值。
+和 position 属性(除了 static)一起使用的, 有下列属性: top, right, bottom, left, width, height 通过设置它们来指定元素的位置
+或大小。
+
+
+
+vertical-align:该属性设置元素的垂直对齐方式。
+
+visibility:该属性规定元素是否可见。
+    Note：即使不可见的元素也会占据页面上的空间。请使用 "display" 属性来创建不占据页面空间的不可见元素。
+
+z-index:所有主流浏览器都支持该属性。该属性用设置元素的堆叠属性，拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+该属性可以为负值。
+该属性设置一个定位元素沿 z 轴的位置，z 轴定义为垂直延伸到显示区的轴。如果为正数，则离用户更近，为负数则表示离用户更远。
+
+Note：Z-index 仅能在定位元素上奏效（例如 position:absolute;）！
+
+值包含：
+    auto：默认。堆叠顺序与父元素相同。
+    number：设置元素的堆叠顺序。可为负值。
+    inherit：规定应该从父元素继承 z-index 属性的值。
+
+
+
+

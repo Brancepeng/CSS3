@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>布局Demo</title>
+  <style>
+    div#numbered {
+      counter-reset: mynum;
+    }
+
+    p:before {
+      content: '('counter(mynum,lower-latin)')';
+      counter-increment: mynum;
+      font-weight: bold;
+    }
+
+    ul, #numbered {
+      border: 1em solid #69b;
+      padding-right:1em;
+    }
+    /*float 属性强制元素向右或者向左，这是控制元素位置和大小的简单方法*/
+    /*在你的示例中，list是根据窗口拉伸。你可以通过使用浮动元素来使它们靠左。*/
+
+    ul, #numbered {float: left;}
+/*／为了保证标题在正确的位置, 你必须为标题指定clear属性来避免标题靠左:*/
+    h3 {clear: left;}
+    #fixed-pin  {
+      position:fixed;
+      top: 3px;
+      right: 3px;
+    }
+  </style>
+
+</head>
+<body>
+<h3 id="oceans" class="">The oceans</h3>
+  <ul>
+    <li>Arctic</li>
+    <li>Atlantic</li>
+    <li>Pacific</li>
+    <li>Indian</li>
+    <li>Southern</li>
+  </ul>
+
+<h3 class="">Numbered paragraphs</h3>
+<div id="numbered">
+  <p>Lorem ipsum</p>
+  <p>Dolor sit</p>
+  <p>Amet consectetuer</p>
+  <p>Magna aliquam</p>
+  <p>Autem veleum</p>
+</div>
+  <img id="fixed-pin" src="../src/1.jpg" alt="Yellow map pin">
+</body>
+</html>

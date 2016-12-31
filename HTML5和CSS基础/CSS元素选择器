@@ -41,3 +41,12 @@ img[src$='.png']
 Selects elements whose value ends with the provided string. Indirectly selects PNG images; any images that
 are PNGs but whose URL doesn't end in ".png" (e.g. `src="some-image.png?_=cachebusterhash"`) won't be selected.
 
+4.pseudo-class selectors
+
+5.基于关系的选择器：
+常见的基于关系的选择器：
+    A E   表示A元素的任一后代元素E（后代节点指A的子节点，子节点的子节点，以此类推）；
+    A > E A的任一子元素（也就是A的直系后代）
+    E:first-child 任一父节点的第一个子元素。参见：:first-child测试用例.html
+    B + E  表示元素B的任一下一个兄弟元素E
+    B ～ E  B元素后面的拥有共同父元素的兄弟元素E

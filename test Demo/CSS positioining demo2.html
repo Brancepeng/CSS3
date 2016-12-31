@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="description" content="详情参见文档：CSS定位属性Positioning">
+  <style>
+    /*在你的样式表里，将父容器的position设置为 relative。无需为它设置任何具体变动。 将子元素的position属性设置为 absolute:*/
+    #parent-div {
+      position: relative;
+    }
+    #forward,#back {
+      position: absolute;
+      margin:0;
+      top:0;
+      left: 0;
+    }
+    #forward {
+      color: red;
+    }
+    #back {
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+<!--为了放置两个元素，一个在另外一个上方, 创建一个父容器来包含两个子元素:-->
+<div id="parent-div">
+  <p id="forward">/</p>
+  <p id="back">\</p>
+</div>
+</body>
+</html>

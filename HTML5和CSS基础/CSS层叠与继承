@@ -1,0 +1,31 @@
+
+
+the content as following comes from https://www.w3.org/TR/CSS/#css.
+
+CSS levels
+cascading style sheets does not have a traditional version,instead it has levels.each level builds on the
+previous ,refining definitions and add features.the feature of high level is a superset of any low level.
+
+CSS Level 1
+the CSS Working Group consider the CSS1 specification as obsolete.CSS Level 1 is defined as all the features
+defined in the CSS1 specification (properties, values, at-rules, etc), but using the syntax and definitions
+in the CSS2.1 specification. CSS Style Attributes defines its inclusion in element-specific style attributes.
+
+CSS Level 2
+the CSS 2 is the W3C recommendation.
+Features in CSS2 that were dropped from CSS2.1 should be considered to be at the Candidate Recommendation
+stage, but note that many of these have been or will be pulled into a CSS Level 3 working draft, in which
+case that specification will, once it reaches CR, obsolete the definitions in CSS2.
+
+CSS Level 3
+CSS 3 builds on CSS level 2 module by module.using the CSS 2.1 specification as its core.Each adds functionality
+and/or replace part of the CSS 2.1 specification.the CSS Working Group intend that the new CSS modules will
+not contradict the CSS2.1 specification:only that they will add functionality and redefine specification.
+As each module is completed,it will be plugged into the existing system of CSS2.1 plus previous-completed modules.
+
+From this level on modules are levelled independently.
+
+CSS Level 4 and beyond
+there in no CSS Level 4.Independent modules can reach level 4 or beyond.but CSS language no longer has levels.
+("CSS Level 3" as a term is used only to differentiate it from the previous monolithic versions.)
+
